@@ -50,7 +50,14 @@ namespace Hello_Class_stud
         }
 
         //Implement Morse_matrix operator +
-
+        public static Morse_matrix operator +(Morse_matrix matr1, Morse_matrix matr2)
+        {
+            Morse_matrix morse = new Morse_matrix();
+            for (int i = 0; i < Size1; i++)
+                for (int j = 0; j < Size2; j++)
+                    morse[i, j] = matr1[i, j] + " " + matr2[i,j];
+            return morse;
+        }
 
         //Realize crypt() with string parameter
         //Use indexers
