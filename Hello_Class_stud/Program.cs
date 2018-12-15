@@ -3,7 +3,7 @@
 namespace Hello_Class_stud
 {
     class Program
-    {//well done
+    {
         static void Main(string[] args)
         {
             int a;
@@ -78,11 +78,12 @@ namespace Hello_Class_stud
 
         static void Str_matr_decrypt()
         {
+            string word;
             Morse_matrix code_tbl = new Morse_matrix();
             code_tbl.Write_matrix();
             Console.WriteLine("From beep to sos");
             string[] sos = { "...  ", "---  ", "...  " };
-            string word = code_tbl.DeCrypt(sos);
+            word = code_tbl.DeCrypt(sos);
             Console.WriteLine("sos decrypt : " + word);
         }
 
@@ -120,10 +121,7 @@ namespace Hello_Class_stud
             code_tbl2.Write_matrix();
 
             if (code_tbl1.Equals(code_tbl2))
-            { //всегда пишем скобки после ифов и циклов для читаемости
-                Console.WriteLine("True");
-
-            }
+                Console.WriteLine("True");           
             else Console.WriteLine("False"); 
 
         }
